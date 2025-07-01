@@ -88,7 +88,7 @@ const AppShowcase = () => {
               </p>
             </h2>
 
-              <video ref={videoRef} src="https://prjct-mgmt-s3-images.s3.us-east-1.amazonaws.com/zentry_trailer-md.mp4"  loop muted />
+              <video ref={videoRef} src="https://prjct-mgmt-s3-images.s3.us-east-1.amazonaws.com/hero-cut-1.mp4 "  loop muted />
               {/* <img src="/public/images/project1" alt="Ryde" /> */}
              </div>
              <div className="text-content">

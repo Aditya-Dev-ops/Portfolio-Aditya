@@ -265,7 +265,7 @@ const socialImgs = [
   },
   {
     name: "GitHub",
-    imgPath: "/public/images/github.png",
+    imgPath: "/images/github.png",
     url:"https://github.com/Aditya-Dev-ops"
   },
 ];
