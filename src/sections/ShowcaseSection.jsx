@@ -51,15 +51,18 @@ const AppShowcase = () => {
   }, []);
 
  // For Video Playing on mouse enter
-  useEffect(() => {
-    const video = videoRef.current;
-    if (mouseEnter) {
-      video.muted = false;      // 👈 Make sure audio is not muted
-      video.play();
-    } else {
-      video.pause();
-    }
-  }, [mouseEnter]);
+  // useEffect(() => {
+  //   const video = videoRef.current;
+    
+  //   if(!video) return;
+
+  //   if (mouseEnter) {
+  //     video.play();
+  //     // video.muted = false;      // 👈 Make sure audio is not muted
+  //   } else {
+  //     video.pause();
+  //   }
+  // }, [mouseEnter]);
   
 
   return (
@@ -88,7 +91,7 @@ const AppShowcase = () => {
               </p>
             </h2>
 
-              <video ref={videoRef} src="https://prjct-mgmt-s3-images.s3.us-east-1.amazonaws.com/hero-cut-1.mp4 "  loop muted />
+              <video ref={videoRef} src="/videos/hero-cut-1.mp4"  loop muted playsInline autoPlay />
               {/* <img src="/public/images/project1" alt="Ryde" /> */}
              </div>
              <div className="text-content">
@@ -104,24 +107,30 @@ const AppShowcase = () => {
           </BentoTilt>
 
           {/* two project container */}
+
           <div className="project-list-wrapper overflow-hidden">
             {/* second project */}
+          <BentoTilt>
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img
                   src="/images/project2.png"
                   alt="Library Management Platform"
-                />
+                  />
               </div>
               <h2>The Library Management Platform</h2>
             </div>
+          </BentoTilt>
             {/* third Project */}
+           <BentoTilt>
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src="/images/project3.png" alt="YC Directory App" />
               </div>
               <h2>YC Directory - A Startup Showcase App</h2>
             </div>
+          </BentoTilt>
+
           </div>
         </div>
       </div>
