@@ -256,7 +256,7 @@ const socialImgs = [
   {
     name: "x",
     imgPath: "/images/x.png",
-    url:""
+    url:"https://x.com/Aditya_sharm18"
   },
   {
     name: "linkedin",

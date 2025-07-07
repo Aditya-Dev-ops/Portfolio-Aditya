@@ -123,11 +123,18 @@ const AppShowcase = () => {
           </BentoTilt>
             {/* third Project */}
            <BentoTilt>
-            <div className="project" ref={ycDirectoryRef}>
-              <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+            <div className="project" ref={ycDirectoryRef}
+            onClick={()=>(
+              window.open("https://project-management-aditya.vercel.app/", "_blank")
+            )}
+            >
+              <div className="image-wrapper bg-[#FFE7EB] rounded-2xl">
+                <img src="images/project-management-images.jpg" alt="YC Directory App" 
+                 className="object-fill"
+                />
+
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>Project-Management - A Project Handling App</h2>
             </div>
           </BentoTilt>
 
