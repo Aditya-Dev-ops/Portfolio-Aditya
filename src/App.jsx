@@ -11,17 +11,20 @@ import Navbar from "./components/NavBar";
 import DraggableAudio from "./components/DraggableAudio";
 import { useEffect, useState } from "react";
 
+
+let state = true;
 const App = () => {
- const [isLoading , setIsLoading] =useState(true);
+ const [isLoading , setIsLoading] =useState(state);
 useEffect(()=>{
   setTimeout(()=>{
    setIsLoading(false);
+   state = false;
   },2000);
 },[]);
 
  
 return ( 
- <>{ isLoading && (
+ <>{ isLoading ? (
     <div className="flex-center absolute z-[999999]
       h-dvh w-screen overflow-hidden bg-violet-50">
       <div className="three-body">
@@ -30,9 +33,9 @@ return (
          <div className="three-body__dot"></div>
       </div>
     </div>
-    )}
-    
-    <DraggableAudio/>
+    ):(
+      <>
+      <DraggableAudio/>
     <Navbar />
     <Hero />
     <ShowcaseSection />
@@ -43,6 +46,8 @@ return (
     {/* <Testimonials /> */}
     <Contact />
     <Footer />
+      </>
+    )}
   </>
 );
 };

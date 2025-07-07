@@ -76,7 +76,7 @@ const AppShowcase = () => {
             onClick={()=>(
               window.open("https://zentry-aditya.netlify.app/", "_blank")
             )}
-           className="first-project-wrapper" ref={ZentryRef}>
+             className="first-project-wrapper" ref={ZentryRef}>
              <div className="image-wrapper" onMouseEnter={()=>setMouseEnter(true)} onMouseLeave={()=> setMouseEnter(false)}>
              <h2 className="special-font uppercase z-30 text-7xl flex flex-col ">   
               <p className="absolute top-0 z-40 "
@@ -123,14 +123,14 @@ const AppShowcase = () => {
           </BentoTilt>
             {/* third Project */}
            <BentoTilt>
-            <div className="project" ref={ycDirectoryRef}
+            <div className="project w-full h-full" ref={ycDirectoryRef}
             onClick={()=>(
               window.open("https://project-management-aditya.vercel.app/", "_blank")
             )}
             >
-              <div className="image-wrapper bg-[#FFE7EB] rounded-2xl">
+              <div className="image-wrapper p-0 m-0 bg-[#FFE7EB] rounded-2xl">
                 <img src="images/project-management-images.jpg" alt="YC Directory App" 
-                 className="object-fill"
+                 className="object-cover"
                 />
 
               </div>
